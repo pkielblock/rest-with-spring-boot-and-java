@@ -4,11 +4,11 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(HttpStatus.NOT_FOUND)
 @JsonSerialize
-public class UnsupportedMathOperationException extends RuntimeException {
+public class ResourceNotFoundException extends RuntimeException {
 
-    public UnsupportedMathOperationException(String message) {
+    public ResourceNotFoundException(String message) {
         super(message);
     }
 }
